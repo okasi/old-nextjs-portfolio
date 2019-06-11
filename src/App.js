@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { animated, Keyframes } from 'react-spring/renderprops';
+import { animated, Keyframes, Spring } from 'react-spring/renderprops';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -169,54 +169,80 @@ function App() {
           )}
         </TopBar>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            paddingTop: '18.5vmin',
-            paddingBottom: '18.5vmin',
-            height: 'calc(100vh - 37vmin)',
-          }}
-        >
 
-
-        <img
-        style={{
-          alignSelf: 'center',
-          width: '50vmin',
-          objectFit: 'scale-down',
-        }}
-        src={whoIs}
-      >
-      </img>
-
-
-
-          <img
+        {barDone && (
+          <div
             style={{
-              alignSelf: 'center',
-              // marginLeft: 'calc(50vw) - 12.5vmin',
-              height: '25vmin',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-evenly',
+              paddingTop: '18.5vmin',
+              paddingBottom: '18.5vmin',
+              height: 'calc(100vh - 37vmin)',
             }}
-            src={logo}
           >
-          </img>
 
 
-          <img
-            style={{
-              alignSelf: 'center',
-              // marginLeft: 'calc(50vw) - 12.5vmin',
-              width: '50vmin',
-              objectFit: 'scale-down',
-            }}
-            src={fsDev}
-          >
-          </img>
+            <Spring
+              from={{ opacity: 0 }}
+              to={{ opacity: 1 }}>
+              {props => (
+                <img
+                  style={{
+                    ...props,
+                    alignSelf: 'center',
+                    width: '34vmin',
+                    objectFit: 'scale-down',
+                  }}
+                  src={whoIs}
+                >
+                </img>
+              )}
+            </Spring>
+
+            <Spring
+              from={{ 
+                opacity: 0,
+                transform: 'scale(0) rotate(0deg)',
+              }}
+              to={{ 
+                opacity: 1,
+                transform: 'scale(1) rotate(-360deg)',
+              }}>
+              {props => (
+                <img
+                  style={{
+                    ...props,
+                    alignSelf: 'center',
+                    // marginLeft: 'calc(50vw) - 12.5vmin',
+                    height: '25vmin',
+                  }}
+                  src={logo}
+                >
+                </img>
+              )}
+            </Spring>
 
 
-        </div>
+            <Spring
+              from={{ opacity: 0 }}
+              to={{ opacity: 1 }}>
+              {props => (
+                <img
+                  style={{
+                    ...props,
+                    alignSelf: 'center',
+                    width: '34vmin',
+                    objectFit: 'scale-down',
+                  }}
+                  src={fsDev}
+                >
+                </img>
+              )}
+            </Spring>
+
+          </div>
+      )}
 
         <BottomBar native>
           {props => (
