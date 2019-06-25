@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Jura&display=swap");
 
+
+
+html,
 body {
   font-family: "Jura", sans-serif;
   background-color: #222222;
   color: white;
-}
-
-html,
-body {
   overflow: hidden;
   position: relative;
-  height: 100%;
+  width: 100vw;
 }
+
 
 a:hover {
   filter: drop-shadow(0 0 1rem DarkOrchid);

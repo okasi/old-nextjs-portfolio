@@ -16,6 +16,12 @@ import LinkedInButton from "./assets/buttons/linkedin";
 import GithubButton from "./assets/buttons/github";
 import TwitterButton from "./assets/buttons/twitter";
 
+import Div100vh from 'react-div-100vh'
+
+// https://github.com/jonathandion/react-tilt
+
+// https://reactjsexample.com/css-3d-mouse-tracking-with-react/
+
 function App() {
   const [barDone, setBarDone] = useState(false);
 
@@ -24,9 +30,10 @@ function App() {
       await next({
         from: {
           opacity: 0,
-          left: "calc(50vw - 6.25vh)",
-          top: "calc(50vh - 6.25vh)",
-          width: "12.5vh"
+          left: "calc(50% - 6.25vh)",
+          top: "calc(50% - 6.25vh)",
+          maxWidth: "12.5vh",
+          width: "12.5%",
         },
         opacity: 1
       });
@@ -40,7 +47,7 @@ function App() {
       });
       //Go Center
       await next({
-        left: "calc(50vw - 6.25vh)"
+        left: "calc(50% - 6.25vh)"
       });
       //Margin away from top
       await next({
@@ -49,8 +56,9 @@ function App() {
       });
       //Expand sides
       await next({
-        width: "75vw",
-        left: "calc(50vw - 37.5vw)"
+        left: "calc(16% - 0vh)",
+        maxWidth: 'none',
+        width: "68%",
       });
 
       setBarDone(true);
@@ -60,9 +68,8 @@ function App() {
       await next({
         from: {
           opacity: 0,
-          left: "calc(50vw - 37.5vmin)",
-          // top: 'calc(50vh - 6.25vh)',
-          width: "75vmin",
+          left: "16%",
+          width: "68%",
           marginTop: "3.125vh"
         },
         opacity: 1
@@ -75,9 +82,10 @@ function App() {
       await next({
         from: {
           opacity: 0,
-          right: "calc(50vw - 6.25vh)",
-          bottom: "calc(50vh - 6.25vh)",
-          width: "12.5vh"
+          right: "calc(50% - 6.25vh)",
+          bottom: "calc(50% - 6.25vh)",
+          maxWidth: "12.5vh",
+          width: "12.5%",
         },
         opacity: 1
       });
@@ -91,7 +99,7 @@ function App() {
       });
       //Go Center
       await next({
-        right: "calc(50vw - 6.25vh)"
+        right: "calc(50% - 6.25vh)"
       });
       //Margin away from bottom
       await next({
@@ -100,8 +108,9 @@ function App() {
       });
       //Expand sides
       await next({
-        width: "75vmin",
-        right: "calc(50vw - 37.5vmin)"
+        right: "calc(16% - 0vh)",
+        maxWidth: 'none',
+        width: "68%",
       });
 
       setBarDone(true);
@@ -111,9 +120,9 @@ function App() {
       await next({
         from: {
           opacity: 0,
-          right: "calc(50vw - 37.5vmin)",
+          right: "16%",
+          width: "68%",
           bottom: "calc(0vw - 0vh)",
-          width: "75vmin",
           marginBottom: "3.125vh"
         },
         opacity: 1
@@ -124,7 +133,7 @@ function App() {
   });
 
   return (
-    <>
+    <Div100vh>
       <Router>
         <TopBar native>
           {props => (
@@ -135,10 +144,14 @@ function App() {
                 alignItems: "center",
                 justifyContent: "space-evenly",
                 flexDirection: "row",
-                height: "12.5vh",
-                borderRadius: "6.25vh",
+                
+                borderRadius: "12.5vh",
                 backgroundColor: "#1BADB4",
-                position: "absolute"
+                position: "absolute",
+
+                height: "12.5vh",
+                minWidth: "12.5vh",
+                
               }}
             >
               {barDone && (
@@ -159,9 +172,13 @@ function App() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-evenly",
-                paddingTop: "18.5vh",
-                paddingBottom: "18.5vh",
-                height: "calc(100vh - 37vh)"
+                alignItems: 'center',
+                height: "63%",
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                marginRight: '-50%',
+                transform: 'translate(-50%, -50%)',
               }}
             >
               <Route exact path="/" component={Home} />
@@ -181,11 +198,13 @@ function App() {
                 alignItems: "center",
                 justifyContent: "space-evenly",
                 flexDirection: "row",
-                // flexGrow: 1,
-                height: "12.5vh",
-                borderRadius: "6.25vh",
+                
+                borderRadius: "12.5vh",
                 backgroundColor: "#1BADB4",
-                position: "absolute"
+                position: "absolute",
+
+                height: "12.5vh",
+                minWidth: "12.5vh",
               }}
             >
               {barDone && (
@@ -199,7 +218,7 @@ function App() {
           )}
         </BottomBar>
       </Router>
-    </>
+    </Div100vh>
   );
 }
 

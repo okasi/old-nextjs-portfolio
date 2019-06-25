@@ -39,7 +39,7 @@ const Home = () => {
             style={{
               ...props,
               alignSelf: "center",
-              // marginLeft: 'calc(50vw) - 12.5vh',
+              // marginLeft: 'calc(50%) - 12.5vh',
               height: "25vh"
             }}
             src={logo}

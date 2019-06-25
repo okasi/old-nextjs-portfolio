@@ -10,29 +10,6 @@ const About = () => {
         to={{ opacity: 1, transform: "scale(1)" }}
       >
         {props => (
-          // <div
-          //   style={{
-          //     ...props,
-          //     alignSelf: "center",
-          //     backgroundColor: "#1BADB4",
-          //     padding: "2.5vmin"
-          //   }}
-          // >
-          //   <span>
-          //     Hey, I'm a tech curious guy from Stockholm.
-          //     <br />
-          //     If you have an application you are interested in developing with
-          //     web technology, I’d love to work with you on it.
-          //     <br />
-          //     I’m a full-stack developer which means I can bring your project
-          //     from concept to completion.
-          //     <br />
-          //     I work primarily with Node.js on the backend and on the frontend
-          //     side of things I use React.
-          //     <br />
-          //   </span>
-          // </div>
-
           <div
             id="about"
             class="card-panel center-align"
