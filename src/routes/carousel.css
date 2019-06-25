@@ -1,0 +1,15 @@
+.carousel .thumb {
+  border: 3px solid #333;
+}
+.carousel .thumb:focus {
+  border: 3px solid #ccc;
+  outline: none;
+}
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 3px solid #fff;
+}
+
+.carousel .carousel-slider {
+  height: 12.5vh;
+}

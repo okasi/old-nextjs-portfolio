@@ -11,14 +11,13 @@ const About = () => {
       >
         {props => (
           <div
-            id="about"
-            class="card-panel center-align"
             style={{
               ...props,
               background: "#595990",
               width: "57.2vmin",
               margin: "auto",
-              padding: "3.3vmin"
+              padding: "3.3vmin",
+              overflow: 'overlay',
             }}
           >
             <center>
@@ -48,10 +47,9 @@ const About = () => {
               </span>
             </center>
             <p
-              class="left-align"
               style={{
                 fontSize: "calc(0.75vw + 0.75vh + 0.375vmin)",
-                lineGeight: "1.75",
+                lineHeight: "1.5",
                 padding: "0 calc(0.1vw + 0.1vh + 0.05vmin)"
               }}
             >

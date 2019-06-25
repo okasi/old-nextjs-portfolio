@@ -26,11 +26,11 @@ const TwitterButton = () => {
         <text
           x="50%"
           y="50%"
-          text-anchor="middle"
-          alignment-baseline="central"
+          textAnchor="middle"
+          alignmentBaseline="central"
           stroke="#fff"
           fill="white"
-          stroke-width="0.25px"
+          strokeWidth="0.25px"
           fontSize="0.68em"
         >
           Twitter
@@ -43,9 +43,9 @@ const TwitterButton = () => {
             width="74.5"
             height="76.9519"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"

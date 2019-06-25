@@ -23,11 +23,11 @@ const HomeButton = () => {
         <text
           x="50%"
           y="50%"
-          text-anchor="middle"
-          alignment-baseline="central"
+          textAnchor="middle"
+          alignmentBaseline="central"
           stroke="#fff"
           fill="white"
-          stroke-width="0.25px"
+          strokeWidth="0.25px"
           fontSize="0.68em"
         >
           Home
@@ -40,9 +40,9 @@ const HomeButton = () => {
             width="62"
             height="55.3013"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
