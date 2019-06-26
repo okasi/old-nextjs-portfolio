@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Jura&display=swap");
 
-
-
 html,
 body {
   font-family: "Jura", sans-serif;
@@ -12,42 +10,6 @@ body {
   width: 100vw;
 }
 
-
 a:hover {
   filter: drop-shadow(0 0 1rem DarkOrchid);
 }
-
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmax;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmax);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

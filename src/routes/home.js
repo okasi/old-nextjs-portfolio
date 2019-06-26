@@ -2,9 +2,13 @@ import React from "react";
 
 import { Spring } from "react-spring/renderprops";
 
-import logo from "../assets/osLogo.png";
+import logo from "../assets/logo/osLogo.png";
+import bolt from "../assets/logo/bolt.png";
+import circle from "../assets/logo/circle.png";
 import whoIs from "../assets/whoIs.png";
 import fsDev from "../assets/fsDev.png";
+
+import Tilt from "react-tilt";
 
 const Home = () => {
   return (
@@ -35,16 +39,51 @@ const Home = () => {
         }}
       >
         {props => (
-          <img
+          <Tilt
+            options={{
+              scale: 1.2
+            }}
             style={{
               ...props,
               alignSelf: "center",
-              // marginLeft: 'calc(50%) - 12.5vh',
-              height: "25vh"
+              height: "25vh",
+              width: "25vh"
             }}
-            src={logo}
-            alt=""
-          />
+          >
+            {/* <img
+              style={{
+                height: "25vh"
+              }}
+              src={logo}
+              alt=""
+            /> */}
+
+            <img
+              style={{
+                height: "25vh",
+                position: "absolute"
+              }}
+              src={circle}
+              alt=""
+            />
+
+            <Tilt
+              options={{
+                scale: 1,
+                axis: "x",
+                reverse: true
+              }}
+            >
+              <img
+                style={{
+                  height: "25vh",
+                  position: "absolute"
+                }}
+                src={bolt}
+                alt=""
+              />
+            </Tilt>
+          </Tilt>
         )}
       </Spring>
 
