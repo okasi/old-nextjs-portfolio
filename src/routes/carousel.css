@@ -13,3 +13,7 @@
 .carousel .carousel-slider {
   height: 12.5vh;
 }
+
+.carousel .slide .legend {
+  background: #b5b5b5;
+}

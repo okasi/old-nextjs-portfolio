@@ -5,7 +5,10 @@ import { Carousel } from "react-responsive-carousel";
 
 import { Spring } from "react-spring/renderprops";
 
-import logo from "../assets/logo/osLogo.png";
+import pobu from "../assets/screenshots/pobu.png";
+import mashup from "../assets/screenshots/mashup.png";
+import cineo from "../assets/screenshots/cineo.png";
+import weather from "../assets/screenshots/weather.png";
 
 import "./carousel.css";
 
@@ -26,36 +29,79 @@ const Work = () => {
               overflow: "hidden"
             }}
           >
-            {/* 
-              first: pobu
-              second: api mashup
-              third: cineo
-              fourth: weather 
-            */}
-
-            <Carousel>
+            <Carousel emulateTouch autoPlay infiniteLoop>
               <>
                 <img
-                  src={logo}
+                  src={pobu}
                   style={{
-                    maxWidth: "57.2vmin",
                     objectFit: "cover"
                   }}
                   alt=""
                 />
-                <p className="legend">Work 1 pobu</p>
+                <p className="legend">
+                  <a
+                    href="https://pobu.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <b>https://pobu.io/</b>
+                  </a>
+                </p>
               </>
 
               <>
                 <img
-                  src={logo}
+                  src={mashup}
                   style={{
-                    maxWidth: "57.2vmin",
                     objectFit: "cover"
                   }}
                   alt=""
                 />
-                <p className="legend">Work 2 Cineo</p>
+                <p className="legend">
+                  <a
+                    href="https://okasi.me/mashup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <b>https://okasi.me/mashup</b>
+                  </a>
+                </p>
+              </>
+              <>
+                <img
+                  src={cineo}
+                  style={{
+                    objectFit: "cover"
+                  }}
+                  alt=""
+                />
+                <p className="legend">
+                  <a
+                    href="http://cineo.chas.academy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <b>http://cineo.chas.academy/</b>
+                  </a>
+                </p>
+              </>
+              <>
+                <img
+                  src={weather}
+                  style={{
+                    objectFit: "cover"
+                  }}
+                  alt=""
+                />
+                <p className="legend">
+                  <a
+                    href="https://okasi.me/weather/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <b>https://okasi.me/weather/</b>
+                  </a>
+                </p>
               </>
             </Carousel>
           </div>

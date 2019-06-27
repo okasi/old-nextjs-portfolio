@@ -2,7 +2,6 @@ import React from "react";
 
 import { Spring } from "react-spring/renderprops";
 
-import logo from "../assets/logo/osLogo.png";
 import bolt from "../assets/logo/bolt.png";
 import circle from "../assets/logo/circle.png";
 import whoIs from "../assets/whoIs.png";
@@ -41,7 +40,7 @@ const Home = () => {
         {props => (
           <Tilt
             options={{
-              scale: 1.2
+              scale: 1.13
             }}
             style={{
               ...props,
