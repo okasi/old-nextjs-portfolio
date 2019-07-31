@@ -16,7 +16,7 @@ import LinkedInButton from "./assets/buttons/linkedin";
 import GithubButton from "./assets/buttons/github";
 import TwitterButton from "./assets/buttons/twitter";
 
-import Div100vh from 'react-div-100vh'
+import Div100vh from "react-div-100vh";
 
 // https://github.com/jonathandion/react-tilt
 
@@ -33,7 +33,7 @@ function App() {
           left: "calc(50% - 6.25vh)",
           top: "calc(50% - 6.25vh)",
           maxWidth: "12.5vh",
-          width: "12.5%",
+          width: "12.5%"
         },
         opacity: 1
       });
@@ -57,8 +57,8 @@ function App() {
       //Expand sides
       await next({
         left: "calc(16% - 0vh)",
-        maxWidth: 'none',
-        width: "68%",
+        maxWidth: "none",
+        width: "68%"
       });
 
       setBarDone(true);
@@ -85,7 +85,7 @@ function App() {
           right: "calc(50% - 6.25vh)",
           bottom: "calc(50% - 6.25vh)",
           maxWidth: "12.5vh",
-          width: "12.5%",
+          width: "12.5%"
         },
         opacity: 1
       });
@@ -109,8 +109,8 @@ function App() {
       //Expand sides
       await next({
         right: "calc(16% - 0vh)",
-        maxWidth: 'none',
-        width: "68%",
+        maxWidth: "none",
+        width: "68%"
       });
 
       setBarDone(true);
@@ -135,35 +135,36 @@ function App() {
   return (
     <Div100vh>
       <Router>
-        <TopBar native>
-          {props => (
-            <animated.div
-              style={{
-                ...props,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-evenly",
-                flexDirection: "row",
-                
-                borderRadius: "12.5vh",
-                backgroundColor: "#1BADB4",
-                position: "absolute",
+        <nav>
+          <TopBar native>
+            {props => (
+              <animated.div
+                style={{
+                  ...props,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  flexDirection: "row",
 
-                height: "12.5vh",
-                minWidth: "12.5vh",
-                
-              }}
-            >
-              {barDone && (
-                <>
-                  <HomeButton />
-                  <AboutButton />
-                  <WorkButton />
-                </>
-              )}
-            </animated.div>
-          )}
-        </TopBar>
+                  borderRadius: "12.5vh",
+                  backgroundColor: "#1BADB4",
+                  position: "absolute",
+
+                  height: "12.5vh",
+                  minWidth: "12.5vh"
+                }}
+              >
+                {barDone && (
+                  <>
+                    <HomeButton />
+                    <AboutButton />
+                    <WorkButton />
+                  </>
+                )}
+              </animated.div>
+            )}
+          </TopBar>
+        </nav>
 
         {barDone && (
           <>
@@ -172,13 +173,13 @@ function App() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-evenly",
-                alignItems: 'center',
+                alignItems: "center",
                 height: "63%",
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                marginRight: '-50%',
-                transform: 'translate(-50%, -50%)',
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                marginRight: "-50%",
+                transform: "translate(-50%, -50%)"
               }}
             >
               <Route exact path="/" component={Home} />
@@ -189,34 +190,36 @@ function App() {
           </>
         )}
 
-        <BottomBar native>
-          {props => (
-            <animated.div
-              style={{
-                ...props,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-evenly",
-                flexDirection: "row",
-                
-                borderRadius: "12.5vh",
-                backgroundColor: "#1BADB4",
-                position: "absolute",
+        <nav>
+          <BottomBar native>
+            {props => (
+              <animated.div
+                style={{
+                  ...props,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  flexDirection: "row",
 
-                height: "12.5vh",
-                minWidth: "12.5vh",
-              }}
-            >
-              {barDone && (
-                <>
-                  <LinkedInButton />
-                  <GithubButton />
-                  <TwitterButton />
-                </>
-              )}
-            </animated.div>
-          )}
-        </BottomBar>
+                  borderRadius: "12.5vh",
+                  backgroundColor: "#1BADB4",
+                  position: "absolute",
+
+                  height: "12.5vh",
+                  minWidth: "12.5vh"
+                }}
+              >
+                {barDone && (
+                  <>
+                    <LinkedInButton />
+                    <GithubButton />
+                    <TwitterButton />
+                  </>
+                )}
+              </animated.div>
+            )}
+          </BottomBar>
+        </nav>
       </Router>
     </Div100vh>
   );

@@ -5,9 +5,13 @@ import Tilt from "react-tilt";
 const WorkButton = () => {
   return (
     <Link to="/work">
-      <Tilt>
+      <Tilt
+        options={{
+          reverse: true
+        }}
+      >
         <svg
-          style={{ height: "12.5vh" }}
+          style={{ height: "11.5vh" }}
           viewBox="0 0 63 65"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
