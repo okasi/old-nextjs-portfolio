@@ -1,9 +1,13 @@
 import React from "react";
 
+import Head from "next/head";
+
+import "../assets/carousel.css";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-import { Spring } from "react-spring/renderprops";
+import { Spring } from "react-spring/renderprops.cjs";
 
 import pobu from "../assets/screenshots/pobu.png";
 import mashup from "../assets/screenshots/mashup.png";
@@ -12,11 +16,13 @@ import weather from "../assets/screenshots/weather.png";
 
 import { BrowserView, MobileView } from "react-device-detect";
 
-import "./carousel.css";
-
 const Work = () => {
   return (
     <>
+      <Head>
+        <title>Who is Okan? - Work</title>
+      </Head>
+
       <Spring
         from={{ opacity: 0, transform: "scale(0.75)" }}
         to={{ opacity: 1, transform: "scale(1)" }}
@@ -67,11 +73,11 @@ const Work = () => {
                     />
                     <p className="legend">
                       <a
-                        href="https://okasi.me/mashup"
+                        href="https://mashup.okasi.me/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <b>https://okasi.me/mashup</b>
+                        <b>https://mashup.okasi.me/</b>
                       </a>
                     </p>
                   </>
@@ -85,11 +91,11 @@ const Work = () => {
                     />
                     <p className="legend">
                       <a
-                        href="http://cineo.chas.academy/"
+                        href="https://cineo.okasi.me/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <b>http://cineo.chas.academy/</b>
+                        <b>https://cineo.okasi.me/</b>
                       </a>
                     </p>
                   </>
@@ -103,11 +109,11 @@ const Work = () => {
                     />
                     <p className="legend">
                       <a
-                        href="https://okasi.me/weather/"
+                        href="https://weather.okasi.me/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <b>https://okasi.me/weather/</b>
+                        <b>https://weather.okasi.me/</b>
                       </a>
                     </p>
                   </>
@@ -151,7 +157,7 @@ const Work = () => {
 
                     <li>
                       <a
-                        href="/03-api-mashup-okan"
+                        href="https://mashup.okasi.me/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
@@ -167,7 +173,7 @@ const Work = () => {
 
                     <li>
                       <a
-                        href="http://cineo.chas.academy/"
+                        href="https://cineo.okasi.me/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
@@ -183,7 +189,7 @@ const Work = () => {
 
                     <li>
                       <a
-                        href="/weather"
+                        href="https://weather.okasi.me/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{

@@ -1,11 +1,17 @@
 import React from "react";
 
-import { Spring } from "react-spring/renderprops";
+import Head from "next/head";
+
+import { Spring } from "react-spring/renderprops.cjs";
 import Tilt from "react-tilt";
 
 const About = () => {
   return (
     <>
+      <Head>
+        <title>Who is Okan? - About</title>
+      </Head>
+
       <Spring
         from={{ opacity: 0, transform: "scale(0.75)" }}
         to={{ opacity: 1, transform: "scale(1)" }}

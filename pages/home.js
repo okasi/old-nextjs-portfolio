@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Spring } from "react-spring/renderprops";
+import Head from "next/head";
+
+import { Spring } from "react-spring/renderprops.cjs";
 
 import bolt from "../assets/logo/bolt.png";
 import circle from "../assets/logo/circle.png";
@@ -9,27 +11,27 @@ import fsDev from "../assets/fsDev.png";
 
 import Tilt from "react-tilt";
 
-import OnImagesLoaded from "react-on-images-loaded";
-
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>Who is Okan? - Home</title>
+      </Head>
+
       <section>
         <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
           {props => (
             <>
-              <OnImagesLoaded timeout={3000}>
-                <img
-                  style={{
-                    ...props,
-                    alignSelf: "center",
-                    width: "34vh",
-                    objectFit: "scale-down"
-                  }}
-                  src={whoIs}
-                  alt=""
-                />
-              </OnImagesLoaded>
+              <img
+                style={{
+                  ...props,
+                  alignSelf: "center",
+                  width: "34vh",
+                  objectFit: "scale-down"
+                }}
+                src={whoIs}
+                alt=""
+              />
             </>
           )}
         </Spring>
@@ -67,16 +69,14 @@ const Home = () => {
               alt=""
             /> */}
 
-                <OnImagesLoaded timeout={3000}>
-                  <img
-                    style={{
-                      height: "25vh",
-                      position: "absolute"
-                    }}
-                    src={circle}
-                    alt=""
-                  />
-                </OnImagesLoaded>
+                <img
+                  style={{
+                    height: "25vh",
+                    position: "absolute"
+                  }}
+                  src={circle}
+                  alt=""
+                />
 
                 <Tilt
                   options={{
@@ -85,16 +85,14 @@ const Home = () => {
                     reverse: true
                   }}
                 >
-                  <OnImagesLoaded timeout={3000}>
-                    <img
-                      style={{
-                        height: "25vh",
-                        position: "absolute"
-                      }}
-                      src={bolt}
-                      alt=""
-                    />
-                  </OnImagesLoaded>
+                  <img
+                    style={{
+                      height: "25vh",
+                      position: "absolute"
+                    }}
+                    src={bolt}
+                    alt=""
+                  />
                 </Tilt>
               </Tilt>
             </>

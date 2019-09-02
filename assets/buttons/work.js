@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Tilt from "react-tilt";
+import React from "react"
+import { Link } from "react-router-dom"
+import Tilt from "react-tilt"
 
 const WorkButton = () => {
   return (
     <Link to="/work">
       <Tilt
         options={{
-          reverse: true
+          reverse: true,
         }}
       >
         <svg
@@ -76,7 +76,7 @@ const WorkButton = () => {
         </svg>
       </Tilt>
     </Link>
-  );
-};
+  )
+}
 
-export default WorkButton;
+export default WorkButton

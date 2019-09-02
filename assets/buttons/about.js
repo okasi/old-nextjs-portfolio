@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Tilt from "react-tilt";
+import React from "react"
+import { Link } from "react-router-dom"
+import Tilt from "react-tilt"
 
 const AboutButton = () => {
   return (
     <Link to="/about">
       <Tilt
         options={{
-          reverse: true
+          reverse: true,
         }}
       >
         <svg
@@ -76,7 +76,7 @@ const AboutButton = () => {
         </svg>
       </Tilt>
     </Link>
-  );
-};
+  )
+}
 
-export default AboutButton;
+export default AboutButton
