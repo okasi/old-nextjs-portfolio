@@ -1,4 +1,4 @@
-import "core-js";
+import "react-app-polyfill/stable";
 
 import React, { useState } from "react";
 
@@ -138,6 +138,8 @@ const IndexPage = () => {
     // alert("done")
   });
 
+  // const isWebKit = "WebkitAppearance" in document.documentElement.style;
+
   return (
     <>
       <Head>
@@ -229,7 +231,6 @@ const IndexPage = () => {
                   transform: "translate(-50%, -50%)"
                 }}
               >
-                <Redirect from="*" to="/" />
                 <Redirect exact path="/" to="/home" />
                 <Route path="/home" component={Home} />
                 <Route path="/about" component={About} />
