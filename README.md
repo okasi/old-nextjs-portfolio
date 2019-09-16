@@ -6,6 +6,8 @@
 * SSR (Server Side Rendering)
 * PWA (Progressive Web App)
 * SEO (Search Engine Optimization)
+* 3D Tilt
+* Spring Animations
 
 <br/>
 
