@@ -12,5 +12,5 @@
 <br/>
 
 ## Visual Design
-### Personal Logo
+### Personal Logo (symbolize my initials)
 ![os-logo](static/android-chrome-512x512.png)
