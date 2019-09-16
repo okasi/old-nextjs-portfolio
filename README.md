@@ -11,4 +11,4 @@
 
 ## Visual Design
 ### Personal Logo
-![os-logo](portfolio/static/android-chrome-512x512.png)
+![os-logo](static/android-chrome-512x512.png)
