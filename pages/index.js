@@ -1,6 +1,7 @@
 import "react-app-polyfill/stable";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 
 import Head from "next/head";
 
@@ -138,12 +139,22 @@ const IndexPage = () => {
     // alert("done")
   });
 
+  function initializeReactGA() {
+    ReactGA.initialize(`${process.env.REACT_APP_GA_ID}`);
+    ReactGA.pageview("/");
+  }
+
+  useEffect(() => {
+    initializeReactGA();
+  }, []);
+
   // const isWebKit = "WebkitAppearance" in document.documentElement.style;
 
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
+
         <link rel="manifest" href="/static/manifest.json" />
         <link rel="manifest" href="/static/site.webmanifest" />
         <link rel="shortcut icon" href="/static/favicon.ico" />

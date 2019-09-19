@@ -4,7 +4,7 @@ import Tilt from "react-tilt";
 const TwitterButton = () => {
   return (
     <a
-      href="https://twitter.com/whosOkan"
+      href="https://twitter.com/okasi_me/"
       target="_blank"
       rel="noopener noreferrer"
     >

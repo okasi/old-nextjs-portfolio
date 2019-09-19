@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGA from "react-ga";
 
 import Head from "next/head";
 
@@ -17,6 +18,10 @@ import weather from "../assets/screenshots/weather.png";
 import { BrowserView, MobileView } from "react-device-detect";
 
 const Work = () => {
+  useEffect(() => {
+    ReactGA.pageview("/work");
+  }, []);
+
   return (
     <>
       <Head>

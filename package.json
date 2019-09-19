@@ -11,6 +11,7 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "dotenv": "^8.1.0",
     "next": "9.0.5",
     "next-images": "^1.1.2",
     "next-offline": "^4.0.5",
@@ -20,8 +21,10 @@
     "react-device-detect": "^1.7.5",
     "react-div-100vh": "^0.3.4",
     "react-dom": "16.9.0",
+    "react-ga": "^2.6.0",
     "react-responsive-carousel": "^3.1.50",
     "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.1.1",
     "react-spring": "^8.0.27",
     "react-tilt": "^0.1.4"
   },

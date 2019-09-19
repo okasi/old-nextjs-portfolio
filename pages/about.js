@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGA from "react-ga";
 
 import Head from "next/head";
 
@@ -6,6 +7,10 @@ import { Spring } from "react-spring/renderprops.cjs";
 import Tilt from "react-tilt";
 
 const About = () => {
+  useEffect(() => {
+    ReactGA.pageview("/about");
+  }, []);
+
   return (
     <>
       <Head>

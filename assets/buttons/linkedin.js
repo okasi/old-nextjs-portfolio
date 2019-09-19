@@ -4,7 +4,7 @@ import Tilt from "react-tilt";
 const LinkedInButton = () => {
   return (
     <a
-      href="https://www.linkedin.com/in/okan-s/"
+      href="https://www.linkedin.com/in/okasi/"
       target="_blank"
       rel="noopener noreferrer"
     >
