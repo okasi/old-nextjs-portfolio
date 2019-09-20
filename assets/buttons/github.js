@@ -4,7 +4,7 @@ import Tilt from "react-tilt";
 const GithubButton = () => {
   return (
     <a
-      href="https://github.com/okan-s/"
+      href="https://github.com/okasi/"
       target="_blank"
       rel="noopener noreferrer"
     >
