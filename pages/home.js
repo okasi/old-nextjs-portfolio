@@ -1,21 +1,20 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
+import React, { useEffect } from 'react'
+import ReactGA from 'react-ga'
 
-import Head from "next/head";
+import Head from 'next/head'
 
-import { Spring } from "react-spring/renderprops.cjs";
+import { Spring } from 'react-spring/renderprops.cjs'
 
-import bolt from "../assets/logo/bolt.png";
-import circle from "../assets/logo/circle.png";
-import whoIs from "../assets/whoIs.png";
-import fsDev from "../assets/fsDev.png";
+import bolt from '../assets/logo/bolt.png'
+import circle from '../assets/logo/circle.png'
+import whoIs from '../assets/whoIs.png'
+import fsDev from '../assets/fsDev.png'
 
-import Tilt from "react-tilt";
+import Tilt from 'react-tilt'
 
 const Home = () => {
-
   useEffect(() => {
-    ReactGA.pageview("/home");
+    ReactGA.pageview('/home')
   }, [])
 
   return (
@@ -26,14 +25,14 @@ const Home = () => {
 
       <section>
         <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
-          {props => (
+          {(props) => (
             <>
               <img
                 style={{
                   ...props,
-                  alignSelf: "center",
-                  width: "34vh",
-                  objectFit: "scale-down"
+                  alignSelf: 'center',
+                  width: '34vh',
+                  objectFit: 'scale-down',
                 }}
                 src={whoIs}
                 alt=""
@@ -47,24 +46,24 @@ const Home = () => {
         <Spring
           from={{
             opacity: 0,
-            transform: "scale(0) rotate(0deg)"
+            transform: 'scale(0) rotate(0deg)',
           }}
           to={{
             opacity: 1,
-            transform: "scale(1) rotate(-360deg)"
+            transform: 'scale(1) rotate(-360deg)',
           }}
         >
-          {props => (
+          {(props) => (
             <>
               <Tilt
                 options={{
-                  scale: 1.13
+                  scale: 1.13,
                 }}
                 style={{
                   ...props,
-                  alignSelf: "center",
-                  height: "25vh",
-                  width: "25vh"
+                  alignSelf: 'center',
+                  height: '25vh',
+                  width: '25vh',
                 }}
               >
                 {/* <img
@@ -77,8 +76,8 @@ const Home = () => {
 
                 <img
                   style={{
-                    height: "25vh",
-                    position: "absolute"
+                    height: '25vh',
+                    position: 'absolute',
                   }}
                   src={circle}
                   alt=""
@@ -87,14 +86,14 @@ const Home = () => {
                 <Tilt
                   options={{
                     scale: 1,
-                    axis: "x",
-                    reverse: true
+                    axis: 'x',
+                    reverse: true,
                   }}
                 >
                   <img
                     style={{
-                      height: "25vh",
-                      position: "absolute"
+                      height: '25vh',
+                      position: 'absolute',
                     }}
                     src={bolt}
                     alt=""
@@ -108,13 +107,13 @@ const Home = () => {
 
       <section>
         <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
-          {props => (
+          {(props) => (
             <img
               style={{
                 ...props,
-                alignSelf: "center",
-                width: "34vh",
-                objectFit: "scale-down"
+                alignSelf: 'center',
+                width: '34vh',
+                objectFit: 'scale-down',
               }}
               src={fsDev}
               alt=""
@@ -123,7 +122,7 @@ const Home = () => {
         </Spring>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

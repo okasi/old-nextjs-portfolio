@@ -1,5 +1,5 @@
-import React from "react";
-import Tilt from "react-tilt";
+import React from 'react'
+import Tilt from 'react-tilt'
 
 const TwitterButton = () => {
   return (
@@ -10,11 +10,12 @@ const TwitterButton = () => {
     >
       <Tilt
         options={{
-          reverse: true
+          reverse: true,
+          max: 0,
         }}
       >
         <svg
-          style={{ height: "11.5vh" }}
+          style={{ height: '11.5vh' }}
           viewBox="0 0 63 65"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +80,7 @@ const TwitterButton = () => {
         </svg>
       </Tilt>
     </a>
-  );
-};
+  )
+}
 
-export default TwitterButton;
+export default TwitterButton

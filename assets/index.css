@@ -36,11 +36,11 @@ img {
 }
 
 /* My stuff  */
-@import url("https://fonts.googleapis.com/css?family=Jura&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Jura&display=swap');
 
 html,
 body {
-  font-family: "Jura", sans-serif;
+  font-family: 'Jura', sans-serif;
   background-color: #222222;
   color: white;
   overflow: hidden;

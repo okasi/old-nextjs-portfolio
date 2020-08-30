@@ -1,17 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Tilt from "react-tilt";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Tilt from 'react-tilt'
 
 const HomeButton = () => {
   return (
     <Link to="/home">
       <Tilt
         options={{
-          reverse: true
+          reverse: true,
+          max: 0,
         }}
       >
         <svg
-          style={{ height: "11.5vh" }}
+          style={{ height: '11.5vh' }}
           viewBox="0 0 63 65"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +77,6 @@ const HomeButton = () => {
         </svg>
       </Tilt>
     </Link>
-  );
-};
-export default HomeButton;
+  )
+}
+export default HomeButton
